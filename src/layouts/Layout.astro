@@ -1,0 +1,145 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LoadingScreen from '../components/LoadingScreen.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Ochotnicza Straż Pożarna Pilzno - służymy społeczności lokalnej" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://maps.googleapis.com">
+
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Separat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Separat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="/src/styles/global.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/styles/global.css"></noscript>
+
+    <!-- Prefetch important pages -->
+    <link rel="prefetch" href="/o-nas">
+    <link rel="prefetch" href="/uslugi">
+    <link rel="prefetch" href="/galeria">
+    <link rel="prefetch" href="/kontakt">
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <LoadingScreen />
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- Performance optimization script -->
+    <script>
+      // Preload critical resources
+      function preloadCriticalResources() {
+        // Preload images on hover
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(link => {
+          link.addEventListener('mouseenter', function(this: HTMLAnchorElement) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('/') && !href.includes('#')) {
+              const linkElement = document.createElement('link');
+              linkElement.rel = 'prefetch';
+              linkElement.href = href;
+              document.head.appendChild(linkElement);
+            }
+          });
+        });
+      }
+
+      // Optimize loading
+      function optimizeLoading() {
+        // Lazy load images
+        if ('IntersectionObserver' in window) {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target as HTMLImageElement;
+                if (img.dataset.src) {
+                  img.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          });
+
+          document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+          });
+        }
+
+        // Preload on idle
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(() => {
+            preloadCriticalResources();
+          });
+        } else {
+          setTimeout(preloadCriticalResources, 100);
+        }
+      }
+
+      // Initialize optimizations
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', optimizeLoading);
+      } else {
+        optimizeLoading();
+      }
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: 'Separat', 'Roboto', 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Separat', 'Roboto', 'Inter', system-ui, sans-serif;
+  }
+
+  /* Fire brigade typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Separat', 'Roboto', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+
+  .font-display {
+    font-family: 'Separat', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+  }
+
+  .font-body {
+    font-family: 'Separat', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+</style>

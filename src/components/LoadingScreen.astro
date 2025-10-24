@@ -1,0 +1,162 @@
+<!-- Loading Screen -->
+<div id="loading-screen" class="fixed inset-0 bg-gradient-to-br from-red-600 via-red-700 to-red-800 z-50 flex items-center justify-center">
+  <!-- Animated Logo -->
+  <div class="text-center">
+    <!-- Logo Container -->
+    <div class="relative mb-8">
+      <div class="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto animate-bounce-in">
+        <svg class="w-12 h-12 text-white animate-glow" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+
+      <!-- Rotating Ring -->
+      <div class="absolute inset-0 w-24 h-24 mx-auto">
+        <div class="w-full h-full border-4 border-white/30 border-t-white rounded-2xl animate-spin"></div>
+      </div>
+    </div>
+
+    <!-- Loading Text -->
+    <h2 class="text-3xl font-bold text-white mb-4 animate-fade-in-up">
+      OSP Pilzno
+    </h2>
+      <p class="text-white/80 text-lg animate-fade-in-up" style="animation-delay: 0.01s;">
+      Ładowanie strony...
+    </p>
+
+    <!-- Progress Bar -->
+    <div class="w-64 h-2 bg-white/20 rounded-full mx-auto mt-8 overflow-hidden">
+      <div id="progress-bar" class="h-full bg-gradient-to-r from-white to-red-200 rounded-full transition-all duration-300 ease-out" style="width: 0%"></div>
+    </div>
+
+    <!-- Loading Dots -->
+    <div class="flex justify-center space-x-2 mt-6">
+      <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+      <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.02s;"></div>
+      <div class="w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 0.04s;"></div>
+    </div>
+  </div>
+
+  <!-- Animated Particles -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="loading-particle loading-particle-1"></div>
+    <div class="loading-particle loading-particle-2"></div>
+    <div class="loading-particle loading-particle-3"></div>
+    <div class="loading-particle loading-particle-4"></div>
+    <div class="loading-particle loading-particle-5"></div>
+    <div class="loading-particle loading-particle-6"></div>
+  </div>
+</div>
+
+<style>
+  /* Loading particles */
+  .loading-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .loading-particle-1 {
+    top: 20%;
+    left: 20%;
+    animation: float 0.65s ease-in-out infinite;
+  }
+
+  .loading-particle-2 {
+    top: 40%;
+    right: 20%;
+    animation: float 0.75s ease-in-out infinite reverse;
+  }
+
+  .loading-particle-3 {
+    bottom: 30%;
+    left: 30%;
+    animation: float 0.85s ease-in-out infinite;
+  }
+
+  .loading-particle-4 {
+    top: 60%;
+    right: 40%;
+    animation: float 0.7s ease-in-out infinite reverse;
+  }
+
+  .loading-particle-5 {
+    bottom: 20%;
+    right: 10%;
+    animation: float 0.8s ease-in-out infinite;
+  }
+
+  .loading-particle-6 {
+    top: 80%;
+    left: 60%;
+    animation: float 0.68s ease-in-out infinite reverse;
+  }
+
+  /* Progress bar animation (very fast) */
+  #progress-bar {
+    background: linear-gradient(90deg, #ffffff, #fca5a5, #ffffff);
+    background-size: 200% 100%;
+    animation: shimmer 0.4s infinite linear;
+  }
+
+  /* Hide loading screen when page is loaded (target ~0.5s total) */
+  .loaded #loading-screen {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.24s ease-out;
+  }
+</style>
+
+<script>
+  // Loading screen functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const progressBar = document.getElementById('progress-bar');
+
+    if (!loadingScreen || !progressBar) return;
+
+    // Simulate loading progress quickly so the whole loading screen finishes ~0.5s
+    let progress = 0;
+    const tick = 60; // ms per update
+    const increment = 25; // ~25% per tick -> ~240ms to reach 100%
+    const interval = setInterval(() => {
+      progress += increment;
+      if (progress > 100) progress = 100;
+
+      progressBar.style.width = progress + '%';
+
+      if (progress >= 100) {
+        clearInterval(interval);
+
+        // Hide loading screen after a very short delay so total ~= 0.5s
+        setTimeout(() => {
+          loadingScreen.style.opacity = '0';
+          loadingScreen.style.visibility = 'hidden';
+          document.body.classList.add('loaded');
+
+          // Remove loading screen from DOM after transition
+          setTimeout(() => {
+            loadingScreen.remove();
+          }, 240);
+        }, 20);
+      }
+    }, tick);
+
+    // Fallback: hide loading screen after 500ms regardless
+    setTimeout(() => {
+      if (loadingScreen && loadingScreen.style.opacity !== '0') {
+        clearInterval(interval);
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.visibility = 'hidden';
+        document.body.classList.add('loaded');
+
+        setTimeout(() => {
+          loadingScreen.remove();
+        }, 240);
+      }
+    }, 500);
+  });
+</script>

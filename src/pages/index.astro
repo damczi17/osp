@@ -1,0 +1,357 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="OSP Pilzno - Ochotnicza Straż Pożarna">
+  <!-- Hero Section with Video Background -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Video Background -->
+    <video class="video-bg" autoplay muted loop playsinline>
+      <source src="/videos/fire-hero-bg.mp4" type="video/mp4">
+      <!-- Fallback image if video doesn't load -->
+    </video>
+
+    <!-- Video Overlay -->
+    <div class="video-overlay"></div>
+
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-red-600 via-red-700 to-red-800"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 container mx-auto px-4 text-center">
+      <div class="max-w-5xl mx-auto">
+        <!-- Logo Animation -->
+        <div class="animate-bounce-in mb-8">
+          <div class="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto glass">
+            <svg class="w-12 h-12 text-white animate-glow" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-6xl md:text-8xl font-display mb-6 leading-tight animate-fade-in-up">
+          <span class="gradient-text-primary">OSP</span>
+          <span class="text-white"> Pilzno</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-2xl md:text-3xl mb-12 text-white/90 animate-fade-in-up" style="animation-delay: 0.2s;">
+          Służymy społeczności lokalnej z <span class="gradient-text-secondary font-semibold">pasją</span> i <span class="gradient-text-secondary font-semibold">poświęceniem</span>
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style="animation-delay: 0.4s;">
+          <a href="tel:998" class="btn-modern bg-white px-10 py-5 rounded-xl text-xl font-bold hover:bg-neutral-100 shadow-large animate-glow" style="color: var(--primary-red);">
+            <span class="flex items-center justify-center gap-3">
+              <span class="text-2xl">🚨</span>
+              <span>Zadzwoń 998</span>
+            </span>
+          </a>
+          <a href="/kontakt" class="btn-modern glass text-white px-10 py-5 rounded-xl text-xl font-bold hover:bg-white/20 shadow-large">
+            <span class="flex items-center justify-center gap-3">
+              <span class="text-2xl">📞</span>
+              <span>Skontaktuj się z nami</span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
+          <div class="w-8 h-12 border-2 border-white/50 rounded-full flex justify-center">
+            <div class="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated Particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+      <div class="particle particle-5"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 relative overflow-hidden" style="background: linear-gradient(180deg, #ffffff, var(--primary-red-subtle));">
+    <!-- Background Elements -->
+    <div class="absolute top-20 left-10 w-32 h-32 rounded-full opacity-20 animate-float" style="background: var(--primary-red-subtle);"></div>
+    <div class="absolute bottom-20 right-10 w-24 h-24 rounded-full opacity-20 animate-float" style="background: var(--secondary-blue); animation-delay: 1s;"></div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16 scroll-reveal">
+          <h2 class="text-5xl md:text-6xl font-display mb-6 gradient-text-primary">
+            O naszej jednostce
+          </h2>
+          <p class="text-2xl font-body max-w-3xl mx-auto leading-relaxed" style="color: var(--secondary-gray);">
+            OSP Pilzno to jednostka ochotniczej straży pożarnej, która od wielu lat
+            <span class="gradient-text-secondary font-semibold">służy społeczności lokalnej</span>
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card-modern text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-large hover:shadow-xl animate-fade-in-left">
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-glow" style="background: var(--gradient-primary-br);">
+              <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-display mb-4 gradient-text-primary">Misja</h3>
+            <p class="font-body text-lg leading-relaxed" style="color: var(--secondary-gray);">
+              Zapewniamy bezpieczeństwo i pomoc w sytuacjach zagrożenia życia i mienia
+            </p>
+          </div>
+
+          <div class="card-modern text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-large hover:shadow-xl animate-fade-in-up" style="animation-delay: 0.2s;">
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-glow" style="background: var(--gradient-secondary); animation-delay: 0.5s;">
+              <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-display mb-4 gradient-text-secondary">Wizja</h3>
+            <p class="font-body text-lg leading-relaxed" style="color: var(--secondary-gray);">
+              Być najlepszą jednostką OSP w regionie, gotową na każde wyzwanie
+            </p>
+          </div>
+
+          <div class="card-modern text-center p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-large hover:shadow-xl animate-fade-in-right" style="animation-delay: 0.4s;">
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 animate-glow" style="background: var(--gradient-accent); animation-delay: 1s;">
+              <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2.01.99L12 11l-1.99-2.01A2.5 2.5 0 0 0 8 8H5.46c-.8 0-1.54.37-2.01.99L1 12.5V22h2v-6h2.5l2.54 7.63A1.5 1.5 0 0 0 9.46 24H12c.8 0 1.54-.37 2.01-.99L16 21l1.99 2.01A2.5 2.5 0 0 0 20 24h2.54c.8 0 1.54-.37 2.01-.99L27 16.5V22h2z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-display mb-4 gradient-text-primary">Wartości</h3>
+            <p class="font-body text-lg leading-relaxed" style="color: var(--secondary-gray);">
+              Odwaga, poświęcenie, profesjonalizm i służba społeczności
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Nasze usługi</h2>
+        <p class="text-xl text-gray-600">Kompleksowa pomoc w sytuacjach zagrożenia</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Gaszenie pożarów</h3>
+          <p class="text-gray-600 text-sm">Profesjonalne gaszenie pożarów budynków, lasów i pojazdów</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Ratownictwo</h3>
+          <p class="text-gray-600 text-sm">Ratowanie osób z wypadków drogowych i innych niebezpiecznych sytuacji</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Usuwanie skutków</h3>
+          <p class="text-gray-600 text-sm">Usuwanie skutków klęsk żywiołowych i innych zdarzeń</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+          <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Edukacja</h3>
+          <p class="text-gray-600 text-sm">Szkolenia z zakresu bezpieczeństwa pożarowego</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/uslugi" class="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200">
+          Zobacz wszystkie usługi
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="py-16 bg-red-600 text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Nasze osiągnięcia</h2>
+        <p class="text-xl text-red-100">Liczby, które mówią same za siebie</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">150+</div>
+          <div class="text-red-100">Interwencji rocznie</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">25</div>
+          <div class="text-red-100">Lat doświadczenia</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">30+</div>
+          <div class="text-red-100">Członków jednostki</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold mb-2">24/7</div>
+          <div class="text-red-100">Gotowość do działania</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Chcesz dołączyć do nas?</h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Jeśli chcesz służyć społeczności i pomagać w sytuacjach zagrożenia,
+        zapraszamy do dołączenia do naszej jednostki OSP Pilzno.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/kontakt" class="bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors duration-200">
+          Skontaktuj się z nami
+        </a>
+        <a href="/o-nas" class="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-600 hover:text-white transition-colors duration-200">
+          Dowiedz się więcej
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Particle animations */
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .particle-1 {
+    top: 20%;
+    left: 20%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .particle-2 {
+    top: 40%;
+    right: 20%;
+    animation: float 8s ease-in-out infinite reverse;
+  }
+
+  .particle-3 {
+    bottom: 30%;
+    left: 30%;
+    animation: float 7s ease-in-out infinite;
+  }
+
+  .particle-4 {
+    top: 60%;
+    right: 40%;
+    animation: float 9s ease-in-out infinite reverse;
+  }
+
+  .particle-5 {
+    bottom: 20%;
+    right: 10%;
+    animation: float 5s ease-in-out infinite;
+  }
+
+  /* Video fallback */
+  .video-bg {
+    background: var(--gradient-primary-br);
+  }
+
+  /* Enhanced scroll reveal */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Staggered animations */
+  .animate-stagger-1 { animation-delay: 0.1s; }
+  .animate-stagger-2 { animation-delay: 0.2s; }
+  .animate-stagger-3 { animation-delay: 0.3s; }
+  .animate-stagger-4 { animation-delay: 0.4s; }
+  .animate-stagger-5 { animation-delay: 0.5s; }
+</style>
+
+<script>
+  // Scroll-triggered animations
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all scroll-reveal elements
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Parallax effect for hero section
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('.parallax');
+
+      parallaxElements.forEach((element: Element) => {
+        const htmlElement = element as HTMLElement;
+        const speed = parseFloat(htmlElement.dataset.speed || '0.5');
+        htmlElement.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor: Element) => {
+      anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href') || '');
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  });
+</script>

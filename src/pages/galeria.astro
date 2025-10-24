@@ -1,0 +1,382 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Galeria - OSP Pilzno" description="Zdjęcia i filmy z działań Ochotniczej Straży Pożarnej Pilzno">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-red-600 to-red-800 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Galeria</h1>
+        <p class="text-xl text-red-100">
+          Zdjęcia i filmy z naszych działań ratowniczych i szkoleń
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Zdjęcia z działań</h2>
+          <p class="text-xl text-gray-600">
+            Dokumentacja naszych interwencji i szkoleń
+          </p>
+        </div>
+
+        <!-- Gallery Filter -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <button class="gallery-filter active bg-red-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-700 transition-colors duration-200" data-filter="all">
+            Wszystkie
+          </button>
+          <button class="gallery-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-300 transition-colors duration-200" data-filter="interventions">
+            Interwencje
+          </button>
+          <button class="gallery-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-300 transition-colors duration-200" data-filter="training">
+            Szkolenia
+          </button>
+          <button class="gallery-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-300 transition-colors duration-200" data-filter="equipment">
+            Sprzęt
+          </button>
+          <button class="gallery-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-300 transition-colors duration-200" data-filter="team">
+            Zespół
+          </button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+          <!-- Intervention Photos -->
+          <div class="gallery-item interventions bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="interventions">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-red-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Gaszenie pożaru budynku</h3>
+                <p class="text-gray-600 text-sm">Interwencja w centrum miasta</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item interventions bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="interventions">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-blue-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Ratownictwo w wypadku</h3>
+                <p class="text-gray-600 text-sm">Akcja ratownicza na drodze krajowej</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item interventions bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="interventions">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-green-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Usuwanie skutków wichury</h3>
+                <p class="text-gray-600 text-sm">Pomoc po nawałnicy</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Training Photos -->
+          <div class="gallery-item training bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="training">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-yellow-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Szkolenie z pierwszej pomocy</h3>
+                <p class="text-gray-600 text-sm">Kurs dla nowych członków</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item training bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="training">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-purple-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Ćwiczenia ratownicze</h3>
+                <p class="text-gray-600 text-sm">Symulacja wypadku drogowego</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item training bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="training">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-indigo-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Szkolenie wysokościowe</h3>
+                <p class="text-gray-600 text-sm">Ratownictwo na wysokości</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Equipment Photos -->
+          <div class="gallery-item equipment bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="equipment">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-red-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Wóz bojowy</h3>
+                <p class="text-gray-600 text-sm">Nowoczesny sprzęt gaśniczy</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item equipment bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="equipment">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-blue-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Sprzęt ratowniczy</h3>
+                <p class="text-gray-600 text-sm">Nożyce hydrauliczne i rozpieracze</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item equipment bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="equipment">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-green-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Sprzęt medyczny</h3>
+                <p class="text-gray-600 text-sm">Wyposażenie do pierwszej pomocy</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Photos -->
+          <div class="gallery-item team bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="team">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-gray-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Zespół OSP Pilzno</h3>
+                <p class="text-gray-600 text-sm">Wszyscy członkowie jednostki</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item team bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="team">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-orange-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Nowi członkowie</h3>
+                <p class="text-gray-600 text-sm">Przyjęcie do jednostki</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item team bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 cursor-pointer" data-category="team">
+            <div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-16 h-16 text-teal-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Spotkanie roczne</h3>
+                <p class="text-gray-600 text-sm">Podsumowanie roku 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Gallery -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Filmy z działań</h2>
+          <p class="text-xl text-gray-600">
+            Nagrania z naszych interwencji i szkoleń
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Video 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="aspect-w-16 aspect-h-9 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-20 h-20 text-red-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Gaszenie pożaru</h3>
+                <p class="text-gray-600">Nagranie z akcji gaśniczej w centrum miasta</p>
+                <div class="mt-4 text-sm text-gray-500">Czas trwania: 3:45</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="aspect-w-16 aspect-h-9 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-20 h-20 text-blue-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Ratownictwo techniczne</h3>
+                <p class="text-gray-600">Akcja ratownicza w wypadku drogowym</p>
+                <div class="mt-4 text-sm text-gray-500">Czas trwania: 5:20</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="aspect-w-16 aspect-h-9 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-20 h-20 text-green-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Szkolenie z pierwszej pomocy</h3>
+                <p class="text-gray-600">Kurs dla nowych członków jednostki</p>
+                <div class="mt-4 text-sm text-gray-500">Czas trwania: 12:30</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 4 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="aspect-w-16 aspect-h-9 bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
+              <div class="text-center p-8">
+                <svg class="w-20 h-20 text-yellow-600 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Ćwiczenia ratownicze</h3>
+                <p class="text-gray-600">Symulacja wypadku z udziałem wielu służb</p>
+                <div class="mt-4 text-sm text-gray-500">Czas trwania: 8:15</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="py-16 bg-red-600 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Nasze osiągnięcia w liczbach</h2>
+        <p class="text-xl text-red-100 mb-8">
+          Statystyki z ostatniego roku działalności
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="text-4xl font-bold mb-2">150+</div>
+            <div class="text-red-100">Interwencji</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold mb-2">45</div>
+            <div class="text-red-100">Szkoleń</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold mb-2">200+</div>
+            <div class="text-red-100">Zdjęć w galerii</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold mb-2">15</div>
+            <div class="text-red-100">Filmów</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Chcesz zobaczyć więcej?</h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Śledź nasze działania na bieżąco i bądź na bieżąco z naszymi interwencjami
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/kontakt" class="bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors duration-200">
+          Skontaktuj się z nami
+        </a>
+        <a href="/o-nas" class="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-600 hover:text-white transition-colors duration-200">
+          Dowiedz się więcej
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Gallery filter functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.gallery-filter');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach((button: Element) => {
+      button.addEventListener('click', function(this: HTMLElement) {
+        const filter = this.getAttribute('data-filter');
+
+        // Update active button
+        filterButtons.forEach((btn: Element) => {
+          const btnElement = btn as HTMLElement;
+          btnElement.classList.remove('active', 'bg-red-600', 'text-white');
+          btnElement.classList.add('bg-gray-200', 'text-gray-700');
+        });
+        this.classList.add('active', 'bg-red-600', 'text-white');
+        this.classList.remove('bg-gray-200', 'text-gray-700');
+
+        // Filter gallery items
+        galleryItems.forEach((item: Element) => {
+          const itemElement = item as HTMLElement;
+          if (filter === 'all' || itemElement.getAttribute('data-category') === filter) {
+            itemElement.style.display = 'block';
+          } else {
+            itemElement.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .aspect-w-16 {
+    position: relative;
+    padding-bottom: 75%; /* 16:9 aspect ratio */
+  }
+
+  .aspect-h-12 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .aspect-h-9 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+</style>

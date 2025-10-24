@@ -1,0 +1,267 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Kontakt - OSP Pilzno" description="Skontaktuj się z Ochotniczą Strażą Pożarną Pilzno">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-red-600 via-red-700 to-red-800 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-display mb-6">Kontakt</h1>
+        <p class="text-xl font-body text-red-100">
+          Skontaktuj się z nami w sprawie współpracy lub dołączenia do jednostki
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-display mb-4 gradient-text-primary">Informacje kontaktowe</h2>
+          <p class="text-xl font-body" style="color: var(--secondary-gray);">
+            Skontaktuj się z nami w sprawach nie związanych z zagrożeniem
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Address -->
+          <div class="card-modern bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-large">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 animate-glow" style="background: var(--gradient-primary-br);">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-display gradient-text-primary">Adres</h3>
+            </div>
+            <div class="font-body" style="color: var(--secondary-gray);">
+              <p class="mb-2"><strong>OSP Pilzno</strong></p>
+              <p class="mb-1">ul. Węgierska 30</p>
+              <p class="mb-1">39-220 Pilzno</p>
+              <p>Polska</p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="card-modern bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-large">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 animate-glow" style="background: var(--gradient-secondary); animation-delay: 0.5s;">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-display gradient-text-secondary">Telefon</h3>
+            </div>
+            <div class="font-body" style="color: var(--secondary-gray);">
+              <p class="mb-2"><strong>Alarmowy:</strong></p>
+              <a href="tel:112" class="font-semibold text-lg hover:opacity-80 transition-all duration-300" style="color: var(--primary-red);">112</a>
+              <p class="mb-2 mt-4"><strong>Biuro:</strong></p>
+              <a href="tel:+48146721073" class="hover:opacity-80 transition-all duration-300" style="color: var(--secondary-gray);">14 6721 073</a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="card-modern bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-large">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 animate-glow" style="background: var(--gradient-accent); animation-delay: 1s;">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-display gradient-text-primary">Email</h3>
+            </div>
+            <div class="font-body" style="color: var(--secondary-gray);">
+              <p class="mb-2"><strong>Ogólne sprawy:</strong></p>
+              <a href="mailto:kontakt@osppilzno.pl" class="hover:opacity-80 transition-all duration-300" style="color: var(--primary-red);">kontakt@osppilzno.pl</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-display mb-4 gradient-text-primary">Lokalizacja</h2>
+          <p class="text-xl font-body" style="color: var(--secondary-gray);">
+            Znajdź naszą remizę
+          </p>
+        </div>
+
+        <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+          <div class="map-responsive" role="region" aria-label="Mapa lokalizacji OSP Pilzno">
+            <iframe
+              title="OSP Pilzno - Lokalizacja"
+              src="https://www.google.com/maps?q=W%C4%99gierska%2030%2039-220%20Pilzno&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              class="map-iframe">
+            </iframe>
+          </div>
+
+          <noscript>
+            <div class="p-4 text-sm text-center" style="color: var(--secondary-gray);">
+              Aby zobaczyć mapę, włącz obsługę JavaScript lub otwórz lokalizację w Google Maps:
+              <br/>
+              <a href="https://www.google.com/maps/search/W%C4%99gierska+30,+39-220+Pilzno" target="_blank" rel="noopener noreferrer" style="color: var(--primary-red);">Otwórz w Google Maps</a>
+            </div>
+          </noscript>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Numbers -->
+  <section class="py-16 relative overflow-hidden" style="background: linear-gradient(135deg, var(--primary-red-subtle), #ffffff, var(--primary-red-subtle));">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-display mb-4 gradient-text-primary">Numery alarmowe</h2>
+          <p class="text-xl font-body" style="color: var(--secondary-gray);">
+            W razie zagrożenia życia lub mienia
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <a href="tel:998" class="card-modern text-white p-6 rounded-lg text-center shadow-large animate-scale-in" style="background: var(--gradient-primary-br); animation-delay: 0.1s;">
+            <h3 class="text-xl font-display mb-2">Straż Pożarna</h3>
+            <div class="text-3xl font-black mb-2">998</div>
+            <p class="text-sm opacity-90">Pożary, ratownictwo</p>
+          </a>
+
+          <a href="tel:999" class="card-modern text-white p-6 rounded-lg text-center shadow-large animate-scale-in" style="background: var(--gradient-secondary); animation-delay: 0.2s;">
+            <h3 class="text-xl font-display mb-2">Pogotowie</h3>
+            <div class="text-3xl font-black mb-2">999</div>
+            <p class="text-sm opacity-90">Nagłe zachorowania</p>
+          </a>
+
+          <a href="tel:997" class="card-modern text-white p-6 rounded-lg text-center shadow-large animate-scale-in" style="background: var(--gradient-accent); animation-delay: 0.3s;">
+            <h3 class="text-xl font-display mb-2">Policja</h3>
+            <div class="text-3xl font-black mb-2">997</div>
+            <p class="text-sm opacity-90">Wykroczenia, bezpieczeństwo</p>
+          </a>
+
+          <a href="tel:112" class="card-modern text-white p-6 rounded-lg text-center shadow-large animate-scale-in" style="background: var(--gradient-neutral); animation-delay: 0.4s;">
+            <h3 class="text-xl font-display mb-2">Numer alarmowy</h3>
+            <div class="text-3xl font-black mb-2">112</div>
+            <p class="text-sm opacity-90">Uniwersalny numer</p>
+          </a>
+        </div>
+
+        <div class="mt-8 bg-red-600 text-white p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-3">Jak zgłosić zagrożenie?</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold mb-2">Podczas rozmowy podaj:</h4>
+              <ul class="text-red-100 space-y-1">
+                <li>• Miejsce zdarzenia (adres)</li>
+                <li>• Co się dzieje</li>
+                <li>• Czy są poszkodowani</li>
+                <li>• Swoje dane kontaktowe</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">Pamiętaj:</h4>
+              <ul class="text-red-100 space-y-1">
+                <li>• Mów spokojnie i wyraźnie</li>
+                <li>• Nie rozłączaj się pierwszy</li>
+                <li>• Czekaj na potwierdzenie</li>
+                <li>• Wykonuj polecenia dyspozytora</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 relative overflow-hidden" style="background: linear-gradient(180deg, #ffffff, var(--primary-red-subtle));">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-display mb-4 gradient-text-primary">Napisz do nas</h2>
+          <p class="text-xl font-body" style="color: var(--secondary-gray);">
+            Masz pytania? Chcesz dołączyć do nas? Skontaktuj się z nami!
+          </p>
+        </div>
+
+        <div class="card-modern bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-large">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium font-body mb-2" style="color: var(--secondary-gray);">Imię i nazwisko *</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 font-body">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium font-body mb-2" style="color: var(--secondary-gray);">Email *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 font-body">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="phone" class="block text-sm font-medium font-body mb-2" style="color: var(--secondary-gray);">Telefon</label>
+                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 font-body">
+              </div>
+              <div>
+                <label for="subject" class="block text-sm font-medium font-body mb-2" style="color: var(--secondary-gray);">Temat *</label>
+                <select id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 font-body">
+                  <option value="">Wybierz temat</option>
+                  <option value="recruitment">Chcę dołączyć do OSP</option>
+                  <option value="cooperation">Współpraca</option>
+                  <option value="training">Szkolenia</option>
+                  <option value="equipment">Sprzęt</option>
+                  <option value="other">Inne</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium font-body mb-2" style="color: var(--secondary-gray);">Wiadomość *</label>
+              <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors duration-200 font-body" placeholder="Opisz szczegółowo swoją sprawę..."></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn-modern text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg animate-glow" style="background: var(--gradient-primary-br);">
+                Wyślij wiadomość
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Responsive map embed: keeps 16:9 ratio and makes iframe fill the area */
+  .map-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .map-responsive .map-iframe,
+  .map-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+
+  /* Fallback styles for small screens */
+  @media (max-width: 640px) {
+    .map-responsive { padding-bottom: 66.66%; /* slightly taller on narrow screens */ }
+  }
+</style>
