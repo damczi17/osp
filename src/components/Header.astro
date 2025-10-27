@@ -5,17 +5,15 @@
   <nav class="container mx-auto px-4 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center space-x-3 animate-fade-in-left">
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg animate-glow" style="background: var(--gradient-primary-br);">
-          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
+      <a href="/" class="flex items-center space-x-3 animate-fade-in-left hover:opacity-80 transition-opacity">
+        <div class="w-14 h-14 flex items-center justify-center">
+          <img src="/images/herb.png" alt="Herb Pilzna OSP" class="w-full h-full object-contain drop-shadow-md" />
         </div>
         <div>
           <h1 class="text-xl font-display gradient-text-primary">OSP Pilzno</h1>
           <p class="text-sm font-body" style="color: var(--secondary-gray);">Ochotnicza Straż Pożarna</p>
         </div>
-      </div>
+      </a>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8 animate-fade-in-up">
@@ -23,12 +21,23 @@
           Strona główna
           <span class="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style="background: var(--primary-red);"></span>
         </a>
-        <a href="/o-nas" class="nav-link font-body transition-all duration-300 font-medium relative group" style="color: var(--secondary-gray);">
-          O nas
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style="background: var(--primary-red);"></span>
-        </a>
-        <a href="/uslugi" class="nav-link font-body transition-all duration-300 font-medium relative group" style="color: var(--secondary-gray);">
-          Usługi
+        <div class="relative group">
+          <a href="/o-nas" class="nav-link font-body transition-all duration-300 font-medium relative group" style="color: var(--secondary-gray);">
+            O nas
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style="background: var(--primary-red);"></span>
+          </a>
+          <!-- Submenu -->
+          <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <a href="/o-nas" class="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
+              O nas
+            </a>
+            <a href="/historia" class="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
+              Historia
+            </a>
+          </div>
+        </div>
+        <a href="/dzialania" class="nav-link font-body transition-all duration-300 font-medium relative group" style="color: var(--secondary-gray);">
+          Działania
           <span class="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style="background: var(--primary-red);"></span>
         </a>
         <a href="/galeria" class="nav-link font-body transition-all duration-300 font-medium relative group" style="color: var(--secondary-gray);">
@@ -38,9 +47,6 @@
         <a href="/kontakt" class="nav-link font-body transition-all duration-300 font-medium relative group" style="color: var(--secondary-gray);">
           Kontakt
           <span class="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style="background: var(--primary-red);"></span>
-        </a>
-        <a href="tel:998" class="btn-modern text-white px-6 py-3 rounded-xl transition-all duration-300 font-semibold shadow-lg animate-glow" style="background: var(--gradient-primary-br);">
-          998
         </a>
       </div>
 
@@ -61,17 +67,17 @@
         <a href="/o-nas" class="nav-link-mobile font-body transition-all duration-300 font-medium py-3 px-4 rounded-lg" style="color: var(--secondary-gray); background: var(--primary-red-subtle);">
           O nas
         </a>
-        <a href="/uslugi" class="nav-link-mobile font-body transition-all duration-300 font-medium py-3 px-4 rounded-lg" style="color: var(--secondary-gray); background: var(--primary-red-subtle);">
-          Usługi
+        <a href="/historia" class="nav-link-mobile font-body transition-all duration-300 font-medium py-3 px-4 rounded-lg" style="color: var(--secondary-gray); background: var(--primary-red-subtle);">
+          Historia
+        </a>
+        <a href="/dzialania" class="nav-link-mobile font-body transition-all duration-300 font-medium py-3 px-4 rounded-lg" style="color: var(--secondary-gray); background: var(--primary-red-subtle);">
+          Działania
         </a>
         <a href="/galeria" class="nav-link-mobile font-body transition-all duration-300 font-medium py-3 px-4 rounded-lg" style="color: var(--secondary-gray); background: var(--primary-red-subtle);">
           Galeria
         </a>
         <a href="/kontakt" class="nav-link-mobile font-body transition-all duration-300 font-medium py-3 px-4 rounded-lg" style="color: var(--secondary-gray); background: var(--primary-red-subtle);">
           Kontakt
-        </a>
-        <a href="tel:998" class="btn-modern text-white px-6 py-4 rounded-xl transition-all duration-300 font-semibold text-center mt-4 shadow-lg" style="background: var(--gradient-primary-br);">
-          Zadzwoń 998
         </a>
       </div>
     </div>
