@@ -23,7 +23,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Logo Animation -->
         <div class="animate-bounce-in mb-8">
           <div class="w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto glass p-4">
-            <img src="/images/herb.png" alt="Herb Pilzna OSP" class="w-full h-full object-contain animate-glow drop-shadow-2xl" />
+            <img src={`${import.meta.env.BASE_URL}images/herb.png`} alt="Herb Pilzna OSP" class="w-full h-full object-contain animate-glow drop-shadow-2xl" />
           </div>
         </div>
 
@@ -180,7 +180,7 @@ import Layout from '../layouts/Layout.astro';
               <!-- Logo Side -->
               <div class="flex justify-center lg:justify-start">
                 <div class="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl shadow-lg border border-red-100">
-                  <img src="/images/zosp_RP.png" alt="Związek Ochotniczych Straży Pożarnych RP" class="w-full max-w-md h-auto object-contain hover:scale-105 transition-transform duration-300" />
+                  <img src={`${import.meta.env.BASE_URL}images/zosp_RP.png`} alt="Związek Ochotniczych Straży Pożarnych RP" class="w-full max-w-md h-auto object-contain hover:scale-105 transition-transform duration-300" />
                 </div>
               </div>
 
@@ -261,7 +261,7 @@ import Layout from '../layouts/Layout.astro';
               <!-- Logo Side -->
               <div class="flex justify-center lg:justify-end order-1 lg:order-2">
                 <div class="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl shadow-lg border border-red-100">
-                  <img src="/images/ksrg_logo.png" alt="Krajowy System Ratowniczo-Gaśniczy" class="w-full max-w-md h-auto object-contain hover:scale-105 transition-transform duration-300" />
+                  <img src={`${import.meta.env.BASE_URL}images/ksrg_logo.png`} alt="Krajowy System Ratowniczo-Gaśniczy" class="w-full max-w-md h-auto object-contain hover:scale-105 transition-transform duration-300" />
                 </div>
               </div>
             </div>
